@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.font-25 {
+  font-size: 25px;
+}
+
+.italic {
+  font-style: italic;
+}

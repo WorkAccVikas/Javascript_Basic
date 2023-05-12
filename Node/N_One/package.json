@@ -1,0 +1,20 @@
+{
+  "name": "n_one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/model/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-creator-node": "^2.3.5",
+    "pdf-node": "^1.0.1",
+    "prompt": "^1.3.0",
+    "prompt-sync": "^4.2.0",
+    "save": "^2.9.0"
+  }
+}

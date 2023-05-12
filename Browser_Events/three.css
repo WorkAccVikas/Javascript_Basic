@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bulb {
+  background: yellow;
+}
+
+.bulbcontainer {
+  height: 341px;
+  width: 341px;
+}

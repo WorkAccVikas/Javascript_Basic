@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="six.css" />
+  </head>
+  <body>
+    <div class="toast-container position-fixed top-0 start-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header rounded">
+          <strong class="me-auto fs-5">Password copied successfully.</strong>
+          <button
+            type="button"
+            class="btn-close"
+            onlick="document.getElementById('liveToast').style.display= 'none'"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <body class="d-flex align-items-center p-2">
+      <div
+        class="container d-flex justify-content-center align-items-center flex-column bg-transparent py-4"
+      >
+        <h1 class="pb-4 text-light">Random Password Generator</h1>
+        <div class="d-flex justify-content-center">
+          <input
+            type="text"
+            id="display"
+            placeholder="Password"
+            readonly="true"
+          />
+          <div
+            class="d-absolute my-1 pt-1 bg-light rounded"
+            id="copy"
+            style="margin-left: -35px"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png"
+              alt="copy"
+              width="25"
+              height="25"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <input
+            type="text"
+            id="password-length"
+            placeholder="Password Length"
+            class="password_length"
+          />
+        </div>
+        <div id="redio-cont" class="d-flex flex-column my-3 fs-5">
+          <div class="d-flex justify-content-between">
+            <label for="fup" class="text-light">Funny Password</label>
+            <input
+              name="radio"
+              class="redio"
+              id="fup"
+              type="radio"
+              value="0"
+              checked
+            />
+          </div>
+          <div class="d-flex justify-content-between">
+            <label for="wp" class="text-light">Weak Password</label>
+            <input name="radio" class="redio" id="wp" type="radio" value="1" />
+          </div>
+          <div class="d-flex justify-content-between">
+            <label for="sp" class="text-light">Strong Password</label>
+            <input name="radio" class="redio" id="sp" type="radio" value="2" />
+          </div>
+          <div class="d-flex justify-content-between">
+            <label for="ssp" class="text-light">Super Strong Password</label>
+            <input name="radio" class="redio" id="ssp" type="radio" value="3" />
+          </div>
+        </div>
+        <button
+          id="btn"
+          type="button"
+          class="btn btn-sm btn-outline-dark rounded-pill px-4 pb-2 text-light fs-5"
+        >
+          Generate
+        </button>
+      </div>
+    </body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="six.js"></script>
+  </body>
+</html>
