@@ -15,8 +15,10 @@ document.querySelector(".this").style.color = "black";
 document.querySelector(".this").style.backgroundColor = "cyan";
 
 console.log(document.getElementsByTagName("a"));
+console.log(document.getElementsByTagName("a").length);
 console.log(document.querySelector(".card").getElementsByTagName("a"));
 console.log(document.querySelectorAll(".card"));
 console.log(document.querySelectorAll(".card")[1].getElementsByTagName("a"));
 console.log(document.getElementsByName("search"));
+console.log(document.getElementsByName("search").length);
 console.log(document.getElementsByName("search")[0].tagName);

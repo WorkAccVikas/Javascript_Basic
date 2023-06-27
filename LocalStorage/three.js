@@ -23,11 +23,13 @@ let display = () => {
   for (i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
     ihtml += `<tr>
-        <th scope="row">${i + 1}</th>
-        <td>${key}</td>
-        <td>${localStorage.getItem(key)}</td>
-        <td><button type="button" class="btn btn-primary bg-dark" onclick="{oneitomdel(${i})}">Delete</button></td>        
-        </tr>`;
+                <th scope="row">${i + 1}</th>
+                <td>${key}</td>
+                <td>${localStorage.getItem(key)}</td>
+                <td>
+                  <button type="button" class="btn btn-primary bg-dark" onclick="{oneitomdel(${i})}">Delete</button>
+                </td>        
+              </tr>`;
   }
   document.getElementById("list").innerHTML = ihtml;
 };
@@ -42,4 +44,3 @@ let oneitomdel = (key) => {
 document.body.onload = () => {
   display();
 };
-

@@ -1,5 +1,5 @@
 class Animal {
-  constructor(name, color) {
+  constructor(name = "XYZ", color) {
     this.name = name;
     this.color = color;
   }
@@ -27,3 +27,7 @@ let m = new Monkey("Chimpu", "orange");
 m.eatBanana();
 m.hide();
 m.shout();
+
+let m1 = new Monkey();
+m1.shout();
+m1.eatBanana();

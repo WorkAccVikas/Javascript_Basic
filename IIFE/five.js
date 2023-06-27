@@ -1,9 +1,11 @@
+// Todo : (1)
 // for (var i = 0; i <= 4; i++) {
 //   console.log("Var : value of i = ", i);
 // }
 
 // console.log("Var : End of value i = ", i); // ? : Value of i = 5
 
+// Todo : (2)
 // for (let j = 0; j <= 4; j++) {
 //   console.log("let : value of j = ", j);
 // }

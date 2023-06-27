@@ -52,6 +52,7 @@ console.log(sum(...arr1));
 let arr2 = [10, 20, 30, 40];
 function sum_of_values(...args) {
   console.log(args);
+  console.log(typeof args);
   console.log(...args);
   let total = 0;
   const add = (x, y) => {
@@ -68,6 +69,7 @@ function sum_of_values(...args) {
 
 console.log(sum_of_values(arr2));
 console.log(sum_of_values([12, 8, 99, 22, 334, 55, 678, 55, 556]));
+console.log(sum_of_values(1, 2, 3));
 
 let obj3 = {
   id: 101,
@@ -131,7 +133,7 @@ function drawChart({
 }
 
 drawChart({
-  size:'tiny',
+  size: "tiny",
   coords: { x: 18, y: 30 },
   radius: 30,
 });
@@ -157,6 +159,7 @@ const {
   translations: [
     {
       title: localeTitle, // rename
+      lastEdit,
     },
   ],
   url,
@@ -165,6 +168,7 @@ const {
 console.log(englishTitle); // "Scratchpad"
 console.log(localeTitle); // "JavaScript-Umgebung"
 console.log(url);
+console.log(lastEdit);
 
 const people = [
   {

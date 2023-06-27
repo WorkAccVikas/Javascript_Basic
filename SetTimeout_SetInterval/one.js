@@ -36,7 +36,7 @@
 
 // Todo : program to display a text using setInterval method
 // function greet() {
-//     console.log('Hello world');
+//   console.log("Hello world");
 // }
 
 // setInterval(greet, 1000);
@@ -102,6 +102,7 @@
 
 var i = setInterval(FunctionA, 1000);
 setTimeout(function () {
+  console.log({ i });
   clearInterval(i);
 }, 5000);
 

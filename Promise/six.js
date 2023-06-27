@@ -77,7 +77,7 @@ let p5 = new Promise((resolve, reject) => {
 
 // *: 3. Promise.race
 // let promise_race = Promise.race([p5, p2, p3]);    // ! : in catch because p5 is rejected
-// let promise_race = Promise.race([p3, p2, p1]); // * : in then because all promises resolved
+// let promise_race = Promise.race([p3, p2, p1]); // * : in then because all promises resolved ,return single value (fastest result) ,here p1
 
 // console.log("Promise.race");
 
@@ -90,7 +90,7 @@ let p5 = new Promise((resolve, reject) => {
 //   });
 
 // *: 4. Promise.any
-// let promise_any = Promise.any([p1, p2, p3]); // * : here p1 value is resolved first => in then
+// let promise_any = Promise.any([p1, p2, p3]); // * : here p1 value is resolved first => in then ,return single value (fastest result) ,here p1
 // let promise_any = Promise.any([p5, p2, p3]); // * : here p5 is rejected => p2 value is resolved because first resolved
 // let promise_any = Promise.any([p5, p4]); // ! : here p4,p5 are rejected => execute catch block
 

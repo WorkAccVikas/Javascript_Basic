@@ -11,3 +11,7 @@ console.log(sp_1.closest("#sp1"));
 console.log(id1.contains(sp_1));
 console.log(sp_1.contains(sp_1));
 console.log(sp_1.contains(id1));
+
+// Todo : matches => T / F
+// Todo : contains => T / F
+// Todo : closest => return element

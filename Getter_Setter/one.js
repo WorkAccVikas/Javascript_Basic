@@ -2,12 +2,13 @@
 // Todo : instanceof method
 class Animals {
   constructor(name) {
+    console.log("Parent Constructor Called........");
     this.name = name; // ? : bad way
     // this._name = name; // * : right way
   }
 
   fly() {
-    console.log("I am flyings");
+    console.log("I am flyings = ", this.name);
   }
   get name() {
     // return this.name;   // ! : Error
@@ -27,7 +28,7 @@ console.log(obj1 instanceof Animals);
 
 class Rabbit extends Animals {
   eatCarrot() {
-    console.log("Eating carrot", this._name);
+    console.log("Eating carrot", this.name);
   }
 }
 

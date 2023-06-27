@@ -47,7 +47,7 @@ let getData = function (classname, speed) {
 };
 
 // * : We can pass n number of arguments in call (separated by ,)
-getData.call(obj3, "L", 70);
+getData.call(obj2, "L", 70);
 getData.call(obj3, "XI", 808);
 
 // Todo : apply
@@ -81,5 +81,5 @@ let getRecord = function (x, y) {
 };
 let a = getRecord.bind(obj2, "UK", 1000);
 console.log(a());
-let b = getRecord.bind(obj2, ["UK", 5000]); // ! : Wrong Way
+let b = getRecord.bind(obj3, ["UK", 5000]); // ! : Wrong Way
 console.log(b());

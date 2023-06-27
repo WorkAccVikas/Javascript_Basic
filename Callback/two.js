@@ -40,7 +40,7 @@ function createData(obj, arr, callback) {
     arr.push(obj);
     console.log(arr);
     callback();
-  }, 10000);
+  }, 5000);
 }
 
 let obj2 = { id: 4, name: "seeta" };

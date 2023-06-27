@@ -16,15 +16,23 @@ const memoization = (fun) => {
   let cache = {};
   return function (...args) {
     console.log("Start = ", cache);
-    let key = JSON.stringify(...args);
-    console.log(key);
+    console.log(...args);
+    let key;
+    if (args.length > 1) {
+      key = args.join("_");
+    } else {
+      key = JSON.stringify(...args);
+    }
+    // todo : or
+    // let key = JSON.stringify(...args);
+    console.log("key = ", key);
     if (!cache[key]) {
-      console.log("First time");
+      // console.log("First time");
       let result = fun.call(this, ...args);
       cache[key] = result;
       return result;
     }
-    console.log("again");
+    // console.log("again");
     return cache[key];
   };
 };

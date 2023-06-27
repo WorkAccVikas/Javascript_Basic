@@ -48,17 +48,17 @@ function loadScript(src_url, callback) {
 //   goodmorning
 // );
 
-// setTimeout(() => {
-//   loadScript(
-//     "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
-//     goodmorning
-//   );
-// }, 5000);
-
-// ? : wrong script url
 setTimeout(() => {
   loadScript(
-    "https://cdn.jsdelivr123.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
-    hello
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
+    goodmorning
   );
 }, 5000);
+
+// ? : wrong script url
+// setTimeout(() => {
+//   loadScript(
+//     "https://cdn.jsdelivr123.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",
+//     hello
+//   );
+// }, 5000);

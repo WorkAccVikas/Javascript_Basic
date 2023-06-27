@@ -1,13 +1,13 @@
 // *: (1)
-// async function hello() {
-//   return 7;
-// }
+async function hello() {
+  return 7;
+}
 
-// function greet() {
-//   return "hello";
-// }
+function greet() {
+  return "hello";
+}
 
-// // *: working because async function
+// *: working because async function
 // hello()
 //   .then((result) => {
 //     console.log("hello result = ", result);
@@ -44,10 +44,8 @@
 //     return result;
 //   });
 
-//   let y = await bangaloreWeather.then((result) => {
-//     console.log("bangalore weather = ", result);
-//     return result;
-//   });
+//   let y = await bangaloreWeather;
+//   console.log("bangalore weather = ", y);
 
 //   return [x, y];
 // }
@@ -161,7 +159,6 @@ const usa_weatherReport = async () => {
 //   console.log("whetherReport : Iterate in promise array");
 //   result.forEach((e) => console.log(e));
 // });
-
 
 // *: here 2 async function execute one by one : time = 17 sec (7 + 10)
 const main = async () => {

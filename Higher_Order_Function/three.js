@@ -22,4 +22,4 @@ console.log(calculate(radius, area));
 console.log(calculate(radius, circumference));
 console.log(calculate(radius, diameter));
 
-
+// Todo : This example use for callback

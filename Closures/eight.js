@@ -4,6 +4,7 @@ function find(position) {
     arr[index] = index * index;
   }
 
+  console.log("length = ", arr.length);
   console.log(arr[position]);
 }
 

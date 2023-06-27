@@ -20,7 +20,7 @@ let timer = setInterval(async function () {
     let url = `https://dummyjson.com/products/${id}`;
     console.log(await fetchContent(url));
   }
-}, 3000);
+}, 30);
 
 setInterval(async function () {
   document.querySelector("#bulb").classList.toggle("bulb");

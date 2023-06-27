@@ -4,13 +4,13 @@ function getData(arr) {
     setTimeout(() => {
       arr.forEach((data, index) => {
         output += `<ul>
-      <li>
-        ${data.id}
-        <ul>
-          <li>${data.name}</li>
-        </ul>
-      </li>
-    </ul>`;
+                    <li>
+                      ${data.id}
+                      <ul>
+                        <li>${data.name}</li>
+                      </ul>
+                    </li>
+                  </ul>`;
       });
       document.body.innerHTML = output;
       resolve(true);

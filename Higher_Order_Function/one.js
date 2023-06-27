@@ -11,7 +11,7 @@
 // console.log(sal.length);
 
 // function removeNegative(e, i) {
-//   console.log(e, i);
+//   // console.log(e, i);
 //   return e > 0;
 // }
 // function doubleSalary(e, i) {
@@ -29,32 +29,47 @@ function add(a, b) {
   });
 }
 
-const asyncHandler = (fun) => async (x, y) => {
-  try {
-    let result = await fun(x, y);
-    console.log({ result });
-    console.log("rest of code");
+function addAll(...rest) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("in addAll function", rest.length);
+      let sum = rest.reduce((total, element) => (total += element), 0);
+      resolve(sum);
+    }, 5000);
+  });
+}
 
-    return result;
+const asyncHandler =
+  (fun) =>
+  async (...args) => {
+    try {
+      // console.log(args);
+      let result = await fun(...args);
+      console.log({ result });
+      console.log("inner rest of code");
 
-    // return new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     console.log("Return result", result);
-    //     resolve(result);
-    //   }, 5000);
-    // });
+      return result;
 
-    // return "Ram"; // * : working
-  } catch (error) {
-    console.log("Error: " + error);
-  }
-};
+      // return new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("Return result", result);
+      //     resolve(result);
+      //   }, 5000);
+      // });
+
+      // return "Ram"; // * : working
+    } catch (error) {
+      console.log("Error: " + error);
+    }
+  };
 
 // console.log(result1);
+
 (async () => {
   let result1 = await asyncHandler(add);
-  //   let result2 = await result1(10, 20);
-  //   console.log("result2 = ", result2);
+  let result2 = await result1(10, 20);
+  console.log("result2 = ", result2);
+  console.log("Second Way");
   result1(10, 20)
     .then((result) => {
       console.log("In then = ", result);
@@ -62,4 +77,8 @@ const asyncHandler = (fun) => async (x, y) => {
     .catch((err) => {
       console.log("In catch = ", err);
     });
+
+  let r3 = await asyncHandler(addAll);
+  let r4 = await r3(1, 2, 3, 4, 5);
+  console.log("r4 = ", r4);
 })();

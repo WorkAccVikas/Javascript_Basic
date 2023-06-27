@@ -13,11 +13,11 @@ let options = {
 
 // Todo : syntax for fetch post api
 // fetch(url, options)
-//   .then((response) => response.json())
-//   .then((json) => console.log(json))
-//   .catch((err) => {
-//     console.log("Error Here");
-//   });
+// .then((response) => response.json())
+// .then((json) => console.log(json))
+// .catch((err) => {
+//   console.log("Error Here");
+// });
 
 // Todo : fetch post api using async await : here we don't use then catch
 const createTodo = async (todo) => {
@@ -53,6 +53,7 @@ const main1 = async () => {
       userId: 5555,
     };
     let x = await createTodo(todo);
+    console.log({ x });
     // *: check response fulfilled or not
     if (Object.keys(x).length === 0) {
       console.log("Post request have some problem");

@@ -1,5 +1,5 @@
 function counter() {
-  var count = 0;
+  let count = 0;
   function incrementCounter() {
     count++;
     console.log(count);

@@ -10,11 +10,15 @@ function calculation(a) {
 
 function curry(fn) {
   return function curriedFunc(...args) {
-    // console.log(fn.length);
+    console.log(args);
+    console.log(fn.length);
+    console.log(`${args.length} => ${fn.length}`);
     if (args.length >= fn.length) {
       return fn(...args);
     } else {
       return function (...next) {
+        console.log(...args);
+        console.log(...next);
         return curriedFunc(...args, ...next);
       };
     }
@@ -23,3 +27,4 @@ function curry(fn) {
 
 let x = curry(sum);
 console.log(x(1)(2)(3));
+console.log(sum(1, 2, 3));

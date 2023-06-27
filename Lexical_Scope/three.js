@@ -20,9 +20,9 @@ const fun1 = () => {
       });
     },
     getFriends2: function () {
-      console.log("getFriends2", this.list);
-      console.log("getFriends2", this.name);
-      let that = this;
+      // console.log("getFriends2", this.list);
+      // console.log("getFriends2", this.name);
+      // let that = this;
       this.name.map((item) => {
         console.log("Line 27 ", this.list, item);
         console.log("Line 28 ", this.name, item);
@@ -37,7 +37,7 @@ const fun1 = () => {
     },
   };
   obj1.getFriends();
-  obj1.getFriends1(); // To solve lexical problem in this using creating that variable
+  obj1.getFriends1(); // ?: To solve lexical problem in this using creating that variable
   obj1.getFriends2(); // *: In arrow function no lexical scope because it refer to parent
   obj1.getFriends3();
 };

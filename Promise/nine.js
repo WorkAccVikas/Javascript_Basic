@@ -30,13 +30,13 @@ function createOrder(cart) {
 }
 
 function validateCart(cart) {
-    return false;
-//   return true;
+  // return false;
+  return true;
 }
 
-
-function proceedToPayment(orderId){
-    return new Promise((resolve,reject)=>{
-        resolve("Payment Successful")
-    })
+function proceedToPayment(orderId) {
+  return new Promise((resolve, reject) => {
+    console.log("OrderId = ", orderId);
+    resolve(`Payment Successful =  ${orderId}`);
+  });
 }

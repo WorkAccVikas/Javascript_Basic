@@ -9,13 +9,13 @@ function getData(arr) {
     console.log("In getData");
     arr.forEach((data, index) => {
       output += `<ul>
-      <li>
-        ${data.id}
-        <ul>
-          <li>${data.name}</li>
-        </ul>
-      </li>
-    </ul>`;
+                    <li>
+                      ${data.id}
+                      <ul>
+                        <li>${data.name}</li>
+                      </ul>
+                    </li>
+                </ul>`;
     });
 
     document.body.innerHTML = output;

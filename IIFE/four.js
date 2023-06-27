@@ -15,14 +15,14 @@ hello();
 (() => {
   console.log("First IIFE = ", name); // * : Ram
   //   console.log("First IIFE = ", id); // ! : Error because id is let
-  console.log("First IIFE = ", city); // * : Ram
+  console.log("First IIFE = ", city); // * : goa
 })();
 
 (() => {
   let city = "pune";
   var name = "Jay";
   console.log("Second IIFE = ", name); // * : jay
-  console.log("Second IIFE = ", city); // * : jay
+  console.log("Second IIFE = ", city); // * : pune
 })();
 
 // * : script add in script scope

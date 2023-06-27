@@ -15,6 +15,7 @@ const arr1 = [-10, 5, 20, -15, 8];
 
 // Todo : find max number from array
 const max = arr1.reduce((acc, curr) => {
+  console.log(`${curr} => ${acc}`);
   return curr > acc ? curr : acc;
 }, arr1[0]);
 

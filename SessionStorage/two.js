@@ -19,6 +19,7 @@ function init() {
 }
 
 function setMode(mode = DEFAULT_MODE) {
+  console.log("In setMode");
   if (mode === DARK_MODE) {
     btn.textContent = SUN;
     document.body.classList.add(DARK_MODE);

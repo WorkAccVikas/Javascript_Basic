@@ -5,6 +5,6 @@ function x() {
     console.log("button1 clicked", ++count);
   });
 }
-x();
+// x();
 
 // ! : problem here count value not increment when we try to button click many time

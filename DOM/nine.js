@@ -17,7 +17,7 @@ console.log(secondDivClassList);
 // *: remove
 secondDiv.classList.remove("italic");
 
-// *: contains
+// *: contains => T / F
 let checkClassExist = secondDiv.classList.contains("bg-yellow");
 console.log(checkClassExist);
 let checkClassExist1 = secondDiv.classList.contains("text-center");

@@ -1,6 +1,6 @@
 // Todo : for all regular function call this point to window object
 function hello(message) {
-  console.log(this.name, message);
+  console.log(this.name, message, this.id);
 }
 
 hello("Gm");
