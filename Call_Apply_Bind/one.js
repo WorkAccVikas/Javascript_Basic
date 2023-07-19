@@ -1,5 +1,5 @@
 // Todo : call
-
+// Todo : More => https://www.c-sharpcorner.com/interview-question/difference-between-call-apply-and-bind-function-in-javascript-explain-with-example
 let obj1 = {
   id: 1,
   name: "ram",
@@ -30,9 +30,9 @@ function display() {
 }
 display.call(obj3);
 
-let show = function (x, y) {
-  console.log("Show = ", x, this.id, this.name, y);
-};
+function show(x, y) {
+  console.log("Show = ", x, "==>", this.id, "==>", this.name, "==>", y);
+}
 show.call(obj3, "Good Morning", "Come in");
 show.call(obj3, ["Good Morning", "Come in"]); // ! : Wrong way
 
@@ -81,5 +81,19 @@ let getRecord = function (x, y) {
 };
 let a = getRecord.bind(obj2, "UK", 1000);
 console.log(a());
+console.log(a());
 let b = getRecord.bind(obj3, ["UK", 5000]); // ! : Wrong Way
 console.log(b());
+
+var person1 = { firstName: "Ram", lastName: "Kapoor" };
+var person2 = { firstName: "Jayesh", lastName: "Kamble" };
+
+function say() {
+  console.log("Hello " + this.firstName + " " + this.lastName);
+}
+
+var sayHelloJon = say.bind(person1);
+var sayHelloKelly = say.bind(person2);
+
+sayHelloJon(); // Hello Jon Kuperman
+sayHelloKelly(); // Hello Kelly King

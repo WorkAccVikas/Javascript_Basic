@@ -1,5 +1,6 @@
 // *: (1)
 async function hello() {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
   return 7;
 }
 

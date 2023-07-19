@@ -10,11 +10,11 @@
 // }
 
 // Todo : Throw Custom Error (using class)
-// class checkCondition extends Error {
-//   constructor(msg) {
-//     super(msg);
-//   }
-// }
+class checkCondition extends Error {
+  constructor(msg) {
+    super(msg);
+  }
+}
 
 // try {
 //   let y = Number.parseInt(prompt("Enter Age : "));

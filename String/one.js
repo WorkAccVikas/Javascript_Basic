@@ -30,12 +30,15 @@ The new keyword complicates the code and slows down execution speed.
 String objects can produce unexpected results:
 */
 
+let w = "John";
 let x = "John";
 let y = new String("John");
 let z = new String("John");
 
 console.log(`z = ${z}, type = ${typeof z}`);
 
+console.log(`x === w : ${x === w}`);
+console.log(`x == w : ${x == w}`);
 console.log(`x === y : ${x === y}`);
 console.log(`x == y : ${x == y}`);
 console.log(`z === y : ${z === y}`);

@@ -1,5 +1,5 @@
 function x() {
-  var a = 1;
+  let a = 1;
   var q = 1000; // * : smartly gc by js engine
   function y() {
     console.log(a);

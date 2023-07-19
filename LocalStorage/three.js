@@ -35,6 +35,7 @@ let display = () => {
 };
 
 let oneitomdel = (key) => {
+  console.log("Key = ", key);
   let keyname = localStorage.key(key);
   console.log("index = ", keyname);
   localStorage.removeItem(keyname);

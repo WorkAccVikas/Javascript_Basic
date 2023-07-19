@@ -3,7 +3,7 @@ let secondDiv = document.querySelector("#second");
 let thirdDiv = document.querySelector("#third");
 
 // * : add
-firstDiv.className = "text-white bg-blue"; //!: it will override existing class
+// firstDiv.className = "text-white bg-blue"; //!: it will override existing class
 firstDiv.classList.add("font-25");
 firstDiv.classList.add("italic");
 

@@ -70,9 +70,10 @@ button4.addEventListener("click", (event) => {
 });
 button4.addEventListener("click", (event) => {
   // event.stopImmediatePropagation();
-  event.stopPropagation();  // * : it will execute all button4 event listener and then stop
+  event.stopPropagation(); // * : it will execute all button4 event listener and then stop
   console.log("button4 second event");
 });
+
 button4.addEventListener("click", (event) => {
   console.log("button4 third event");
 });
@@ -94,9 +95,12 @@ let div6 = document.getElementById("div6");
 let div6a = document.getElementById("div6a");
 let div6b = document.getElementById("div6b");
 
+// Todo : Here { capture: true }, if we click on div6b then Output = div 6 => div6b => div6a
 div6.addEventListener("click", (e) => {
   console.log("div 6 clicked");
 });
+
+// Todo : Here { capture: true }, if we click on div6b then Output =  div6a => div6b => div 6 
 div6a.addEventListener(
   "click",
   (e) => {
@@ -106,6 +110,7 @@ div6a.addEventListener(
     capture: true,
   }
 );
+
 div6b.addEventListener("click", (e) => {
   console.log("div 6b clicked");
 });

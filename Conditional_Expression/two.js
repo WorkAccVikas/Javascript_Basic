@@ -1,6 +1,7 @@
 // Todo : switch case
 
-let day = "Tuesday";
+// let day = "Tuesday";
+let day = "God";
 
 switch (day) {
   case "Sunday":

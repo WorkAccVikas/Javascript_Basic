@@ -27,12 +27,12 @@ const memoization = (fun) => {
     // let key = JSON.stringify(...args);
     console.log("key = ", key);
     if (!cache[key]) {
-      // console.log("First time");
+      console.log("First time");
       let result = fun.call(this, ...args);
       cache[key] = result;
       return result;
     }
-    // console.log("again");
+    console.log("again");
     return cache[key];
   };
 };
@@ -40,11 +40,12 @@ const memoization = (fun) => {
 console.time("memoization");
 const efficient = memoization(calc);
 const result = efficient(500000);
-console.log(result);
+console.log({ result });
 console.timeEnd("memoization");
 
 console.time("input 2");
-console.log(efficient(500000));
+const result1 = efficient(500000);
+console.log({ result1 });
 console.timeEnd("input 2");
 
 console.time("input 3");

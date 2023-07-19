@@ -320,10 +320,12 @@ console.log(r49);
 
 // *: Remove duplicate from array
 let arr32 = [1, 2, 3, 4, 1, 2, 3, 4, 5];
-let r50 = Array.from(new Set(arr32));
+let set1 = new Set(arr32);
+console.log(set1);
+let r50 = Array.from(set1);
 console.log(r50);
 let arr33 = [1, 2, 3];
-console.log(Array.from(arr33, (x) => x + x));
+console.log(Array.from(arr33, (x) => x ** 2));
 console.log(arr33);
 
 // * : 21. isArray
@@ -336,7 +338,7 @@ console.log(Array.isArray(s9));
 
 // * : 22. flat
 let arr35 = [1, [2, [3, [4, 5]]]];
-let r51 = arr35.flat(4);
+let r51 = arr35.flat(3);
 console.log(r51);
 console.log(arr35);
 let arr36 = [1, [2, [3, [4, [5, [6]]]]]];

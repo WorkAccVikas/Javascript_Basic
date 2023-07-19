@@ -103,7 +103,7 @@ console.log(`y = ${y} && typeof y = ${typeof y}`);
 let car = "";
 console.log(`car = ${car} && typeof car = ${typeof car}`);
 
-console.log(`typeof undefined= ${typeof undefined}`);
+console.log(`typeof undefined = ${typeof undefined}`);
 
 // Todo :  Difference Between Undefined and Null
 // Todo :  undefined and null are equal in value but different in type:

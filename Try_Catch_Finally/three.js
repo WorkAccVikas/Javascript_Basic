@@ -33,7 +33,7 @@
 //     return a;
 //   } catch (error) {
 //     console.log("This is error");
-//     // console.log(mm);
+//     // console.log(mm); // * : Working Properly even if catch block have error
 //   } finally {
 //     console.log("End 3");
 //   }

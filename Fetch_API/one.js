@@ -1,5 +1,5 @@
 // Todo : syntax for fetch get api
-let p1 = fetch("https://jsonplaceholder.typicode.com/todos/");
+let p1 = fetch("https://jsonplaceholder.typicode.com/todo/");
 
 p1.then((response) => {
   console.log(response);
@@ -10,6 +10,11 @@ p1.then((response) => {
   //   return x;
 })
   .then((data) => {
+    console.log(!data);
+    if (!Object.keys(data).length) {
+      console.log("no data found");
+      throw new Error("Data Empty");
+    }
     console.log(data);
   })
   .catch((err) => {

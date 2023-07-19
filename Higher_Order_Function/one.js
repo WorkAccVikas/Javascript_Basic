@@ -7,18 +7,19 @@
 // setTimeout(hello, 3000);
 
 // * : (2)
-// let sal = [500, 20, 780, 60, 499, 1000, 300, 99, -99, -88, 0, -4, -99];
-// console.log(sal.length);
+let sal = [500, 20, 780, 60, 499, 1000, 300, 99, -99, -88, 0, -4, -99];
+console.log(sal.length);
 
-// function removeNegative(e, i) {
-//   // console.log(e, i);
-//   return e > 0;
-// }
-// function doubleSalary(e, i) {
-//   return e * 2;
-// }
-// let r2 = sal.filter(removeNegative).map(doubleSalary);
-// console.log(r2);
+function removeNegative(e, i) {
+  console.log(e, i);
+  return e > 0;
+}
+function doubleSalary(e, i) {
+  console.log(e, i);
+  return e * 2;
+}
+let r2 = sal.filter(removeNegative).map(doubleSalary);
+console.log(r2);
 
 function add(a, b) {
   return new Promise((resolve, reject) => {

@@ -5,8 +5,14 @@
 let arr1 = [1, 2, 3, 4, 5];
 console.log(...arr1); // ? : Template literal (Spread)
 // * : below spread operator
-let arr2 = [...arr1]; // ? : here arr2 has completely new reference 
+let arr2 = [...arr1]; // ? : here arr2 has completely new reference
 console.log(arr2);
+console.log(arr1);
+
+let arr4 = arr1;
+console.log(arr1 == arr2);
+console.log(arr1 == arr4);
+
 arr2.push(6);
 arr1.push(7);
 console.log(arr1);

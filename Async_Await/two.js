@@ -13,14 +13,14 @@ function getData(arr) {
                   </ul>`;
       });
       document.body.innerHTML = output;
-      resolve(true);
+      resolve("Sachin");
     }, 15000);
   });
 }
 
-function hello() {
-  console.log("hello");
-  return "hi";
+function hello(name) {
+  console.log("hello " + name);
+  return `hi ${name}`;
 }
 
 function createData(obj, arr) {
@@ -49,7 +49,7 @@ const start = async () => {
   console.log({ x });
   let y = await getData(x);
   console.log({ y });
-  let z = hello();
+  let z = hello(y);
   console.log({ z });
 };
 

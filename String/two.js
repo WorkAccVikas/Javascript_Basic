@@ -64,7 +64,7 @@ console.log(
 // Todo : Regular expressions are written without quotes.
 let s2 = "Please visit Microsoft and Microsoft!";
 console.log(
-  `replace for all occurence = ${s2.replace(/Microsoft/g, "W3Schools")}`
+  `replace for all occurrence = ${s2.replace(/Microsoft/g, "W3Schools")}`
 );
 console.log(`replace default = ${s2.replace("Microsoft", "W3Schools")}`);
 console.log(`replace default = ${s2.replace("MICROSOFT", "W3Schools")}`);
@@ -103,7 +103,9 @@ console.log(`padEnd() = ${s4.padEnd(4, "x")}`);
 
 // * : 12. Extract char from string
 console.log(`1 index character using charAt = ${x1.charAt(1)}`);
+console.log(`1 index character using charAt = ${x1.charAt(-1)}`); // ! : return Empty string
 console.log(`1 index character without using charAt = ${x1[1]}`);
+console.log(`1 index character without using charAt = ${x1[-1]}`); // ! : return undefined
 console.log(`1 index character with charCodeAt = ${x1.charCodeAt(1)}`);
 console.log(String.fromCharCode(97));
 
@@ -115,6 +117,7 @@ const word3 = "Aviation";
 // * : 13. include
 console.log(sentence.includes(word1));
 console.log(sentence.includes(word3));
+console.log(sentence.includes('tion'));
 console.log(
   `The word "${word1}" ${
     sentence.includes(word1) ? "is" : "is not"
@@ -126,6 +129,7 @@ const sentence2 =
   "The commercial aviation industry suffered 39 total accidents in 2022, an increase from 29 in 2021. aviation";
 console.log(sentence2.search("aviation"));
 console.log(sentence2.search("Aviation"));
+console.log(sentence2.search("tion"));
 
 // * : 15. match
 console.log(sentence.match("in"));
