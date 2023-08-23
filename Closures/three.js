@@ -14,7 +14,6 @@ console.log("hi");
 p();
 
 function m() {
-
   // for (var i = 0; i <= 5; i++) {
   //   setTimeout(() => {
   //     console.log({ i });
@@ -27,7 +26,7 @@ function m() {
   //   }, j * 1000);
   // }
 
-  // * : you use var in for loop and output must be same as let output
+  // * : you use var in for loop and output must be same as let output : 1st way
   for (var k = 0; k <= 5; k++) {
     function close(k) {
       setTimeout(() => {
@@ -35,6 +34,18 @@ function m() {
       }, k * 1000);
     }
     close(k);
+  }
+
+  // * : you use var in for loop and output must be same as let output : 2nd way
+  for (var l = 0; l < 3; l++) {
+    setTimeout(
+      (function (m) {
+        return function () {
+          console.log(m);
+        };
+      })(l),
+      1000 * l
+    );
   }
 }
 m(); // ! : here i is 6 (5 times)
