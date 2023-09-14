@@ -3,9 +3,9 @@
 function register() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject("Error while ");
+      // reject("Error while ");
       console.log("Register end");
-      //   resolve(1);
+        resolve(1);
     }, 1 * 1000);
   });
 }

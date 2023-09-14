@@ -1,13 +1,16 @@
 const outer = function (age) {
-  //   const inner = function (age1) {
-  //     console.log(`Inner age is ${age1} and name is  ${this.name}`);
-  //   };
-  const inner = (age1) => {
+  console.log(this);
+  const inner1 = function (age1) {
+    console.log(this);
     console.log(`Inner age is ${age1} and name is  ${this.name}`);
   };
-  //   inner(age); // ! : undefined for normal function
-  //   inner.bind(this)(age); // * : Solution 1 for normal function
-  inner(age); // * : Solution 2 for arrow function
+  const inner2 = (age1) => {
+    console.log(this);
+    console.log(`Inner age is ${age1} and name is  ${this.name}`);
+  };
+  inner1(age); // ! : undefined for normal function
+  // inner1.bind(this)(age); // * : Solution 1 for normal function
+  inner2(age); // * : Solution 2 for arrow function
 };
 
 let myObj = {

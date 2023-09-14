@@ -22,7 +22,7 @@ const hello1 = () => {
   innerFunc1();
 
   const innerFunc2 = () => {
-    console.log("In innerFunc2 = ", this); // * : window object because regular function call
+    console.log("In innerFunc2 = ", this); // * : window object because arrow function call
     console.log("In innerFunc2 = ", this.name); // ? : Empty String
     console.log("In innerFunc2 = ", name); // ? : pooja
   };

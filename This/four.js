@@ -29,12 +29,12 @@ obj.f1();
 
 const f2 = () => {
   console.log("In f2 Global function = ", this.x, this.y); // * : 10 undefined
-  console.log("In f2 Global function= ", x, y);
+  console.log("In f2 Global function = ", x, y);
 };
 f2();
 
 function f3() {
-  console.log("In f3 Global function = ", this.x, this.y); // * : 10 undefined
+  console.log("In f3 Global function = ", this.x, this.y); // * : undefined undefined
   console.log("In f3 Global function= ", x, y);
 }
 f3();

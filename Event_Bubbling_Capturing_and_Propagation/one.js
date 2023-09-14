@@ -100,7 +100,7 @@ div6.addEventListener("click", (e) => {
   console.log("div 6 clicked");
 });
 
-// Todo : Here { capture: true }, if we click on div6b then Output =  div6a => div6b => div 6 
+// Todo : Here { capture: true }, if we click on div6b then Output =  div6a => div6b => div 6
 div6a.addEventListener(
   "click",
   (e) => {

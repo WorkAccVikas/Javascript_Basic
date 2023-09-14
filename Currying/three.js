@@ -36,16 +36,17 @@ console.log(filterByName(list, "John"));
 // * : (A)
 // const filtering = (name) => (item) => item.name !== name;
 // * : (B)
-function filtering(name) {
-  console.log(name);
+function filtering(searchVal, property) {
+  console.log(searchVal);
   return function innerFunc(item) {
     console.log(item);
-    return item.name !== name;
+    console.log(property);
+    return item[property] !== searchVal;
   };
 }
 
-const filterByName1 = (list, name) => {
-  return list.filter(filtering(name));
+const filterByName1 = (list, searchVal) => {
+  return list.filter(filtering(searchVal, "name"));
 };
 
 console.log(filterByName1(list, "John"));

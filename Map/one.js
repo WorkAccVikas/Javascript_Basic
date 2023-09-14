@@ -19,3 +19,4 @@ v1.set(v3, 20);
 
 console.log(v1);
 console.log(v1.get(v2));
+console.log(v1.get(v3));

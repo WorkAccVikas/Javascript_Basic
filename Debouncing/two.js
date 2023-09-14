@@ -23,7 +23,8 @@ const debounce = (fn, timeout = DEBOUNCE_DURATION) => {
   };
 };
 
-t1.addEventListener("keyup", debounce(show));
+// t1.addEventListener("keyup", debounce(show));
+t1.addEventListener("keyup", debounce(show, 5000));
 
 // Todo : With debounce with multiple parameters
 // const show = (param1, param2) => {
