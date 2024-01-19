@@ -262,7 +262,7 @@ let persons2 = [
   },
   {
     name: "Ram",
-    age: 18,
+    age: 188,
   },
 ];
 const findRamInPerson2 = (element, index, array) => element.name === "Ram";
@@ -344,7 +344,7 @@ console.log(arr35);
 let arr36 = [1, [2, [3, [4, [5, [6]]]]]];
 let r52 = arr36.flat(4);
 console.log(r52);
-let r53 = arr36.flat(5);
+let r53 = arr36.flat(5);  // * : total 6 so used 5
 console.log(r53);
 let r54 = arr36.flat(6);
 console.log(r54);

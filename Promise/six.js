@@ -75,7 +75,7 @@ let p5 = new Promise((resolve, reject) => {
 //     console.log("promise_all_settled : Error in catch : ", err);
 //   });
 
-// *: 3. Promise.race
+// *: 3. Promise.race : order doesn't matter, if fastest promise failed then catch else return value
 // let promise_race = Promise.race([p5, p2, p3]);    // ! : in catch because p5 is rejected
 // let promise_race = Promise.race([p3, p2, p1]); // * : in then because all promises resolved ,return single value (fastest result) ,here p1
 
@@ -89,7 +89,7 @@ let p5 = new Promise((resolve, reject) => {
 //     console.log("promise_race : Error in catch");
 //   });
 
-// *: 4. Promise.any
+// *: 4. Promise.any : order doesn't matter, if fast1 failed it check fast 2 and so on... . If all fails then show AggregateError else success
 // let promise_any = Promise.any([p1, p2, p3]); // * : here p1 value is resolved first => in then ,return single value (fastest result) ,here p1
 // let promise_any = Promise.any([p5, p2, p3]); // * : here p5 is rejected => p2 value is resolved because first resolved
 // let promise_any = Promise.any([p5, p4]); // ! : here p4,p5 are rejected => execute catch block

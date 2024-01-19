@@ -21,7 +21,7 @@ const c2 = 2000;
   b += 1;
   a += 2;
   const c1 = 3000;
-  // var z = 999;  // ! : illegal shadowing => let to var
+  // var y = 999;  // ! : illegal shadowing => let to var
   // Todo : declare var
   var w = 999;
 

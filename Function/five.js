@@ -1,4 +1,4 @@
-// Todo : Once Function
+// Todo : Once Function (Best)
 
 function multiplyBy2(num) {
   return num * 2;

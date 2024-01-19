@@ -8,8 +8,8 @@ function init() {
   name = "Sachin"; // * : if this line is commented then Virat returns otherwise Sachin will returns
   return displayName;
 }
-// let c1 = init();
-// c1();
+let c1 = init();
+c1();
 
 // Todo : (2) Nested Closures
 function main1() {
@@ -67,5 +67,5 @@ function xyz() {
   a3 = 3; //  ! : It will add in global scope
   console.log(a1, a2, a3);
 }
-// xyz();
-// console.log(a3); // * : Output printed on console because a3 add in global scope
+xyz();
+console.log(a3); // * : Output printed on console because a3 add in global scope

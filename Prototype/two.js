@@ -4,6 +4,7 @@
 function Employee(name) {
   this.name = name;
 }
+
 console.log(Employee);
 console.log(Employee.name);
 console.log(Employee.age); // ? : undefined because age is not present in Employee

@@ -1,5 +1,7 @@
 // TODO : 1. Register 2. Send Email 3. Login 4. Get User Data 5. Display User Data
 
+console.log("Start");
+
 function register() {
   setTimeout(() => {
     console.log("Register end");
@@ -38,5 +40,5 @@ displayData();
 
 console.log("Other work");
 
-// PROBLEM (1) : Here, Other work is printed because setimeout is used (means async)
+// PROBLEM (1) : Here, Other work is printed because settimeout is used (means async)
 // PROBLEM (2) : Here, Register take 6 second but Email send is printed before register printed

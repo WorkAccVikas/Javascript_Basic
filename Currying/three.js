@@ -45,8 +45,8 @@ function filtering(searchVal, property) {
   };
 }
 
-const filterByName1 = (list, searchVal) => {
-  return list.filter(filtering(searchVal, "name"));
+const filterByName1 = (list, searchVal, property) => {
+  return list.filter(filtering(searchVal, property));
 };
 
-console.log(filterByName1(list, "John"));
+console.log(filterByName1(list, "John", "name"));

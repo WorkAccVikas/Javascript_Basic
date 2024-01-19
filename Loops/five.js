@@ -13,6 +13,7 @@ function Counter() {
 Counter.prototype.add = function (arr) {
   arr.forEach((element) => {
     console.log(element);
+    console.log(this);
     this.sum += element;
     ++this.count;
   });

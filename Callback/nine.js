@@ -1,5 +1,7 @@
 // TODO : 1. Register 2. Send Email 3. Login 4. Get User Data 5. Display User Data
 
+console.log("Start");
+
 function waitForNSecond(second = 1) {
   let ms = second * 1000 + new Date().getTime();
   while (new Date() < ms) {}
