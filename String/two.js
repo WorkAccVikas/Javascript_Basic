@@ -17,29 +17,58 @@ console.log(`Lower Case = ${name.toLowerCase()}`);
 // * : 4. Slice
 let s1 = "Apple, Banana, Kiwi";
 console.log(`Slice till end = ${name.slice(2)}`);
+
 console.log(`Slice till end = ${name.slice(2, 2)}`);
+
 console.log(`Slice to specific position = ${name.slice(2, 4)}`);
 console.log(`Slice to specific position = ${name.slice(4, 2)}`);
+
 console.log(`Slice to specific position = ${name.slice(-4, 1)}`);
+console.log(`Slice to specific position = ${name.slice(-4, 7)}`);
+
 console.log(`Slice to specific position = ${name.slice(1, -4)}`);
+console.log(`Slice to specific position = ${name.slice(5, -4)}`);
+
 console.log(`Slice -ve from start with end of string = ${s1.slice(-1)}`);
 console.log(`Slice -ve from start with end of string = ${s1.slice(-2)}`);
+
 console.log(
   `Slice -ve from start source index and end with other index =${s1.slice(
     -6,
     -2
   )}`
 );
+console.log(
+  `Slice -ve from start source index and end with other index =${s1.slice(
+    -2,
+    -6
+  )}`
+);
+
 let s5 = "Please give me Rs 1000";
 console.log(`amount = ${s5.slice("Please give me Rs ".length)}`);
 
 // * : 5. Substring
+/** NOTE :
+ *  - If one negative between two parameter then it treated as 0
+ *  - If START > END then swap
+ */
+console.log(`Substring text = ${name.substring(2)}`);
+console.log(`Substring text = ${name.substring(-2)}`);
+
 console.log(`Substring text = ${name.substring(2, 2)}`);
+
 console.log(`Substring text = ${name.substring(2, 4)}`);
 console.log(`Substring text = ${name.substring(4, 2)}`);
+
 console.log(`Substring text = ${s1.substring(7, 13)}`);
+console.log(`Substring text = ${s1.substring(13, 7)}`);
+
 console.log(`Substring text = ${s1.substring(7, -13)}completed`);
 console.log(`Substring text = ${s1.substring(-13, 7)}completed`);
+
+console.log(`Substring text = ${s1.substring(-13, -7)}completed`);
+console.log(`Substring text = ${s1.substring(-7, -13)}completed`);
 
 // * : 6. Substr
 console.log(
@@ -53,10 +82,28 @@ console.log(
     -4
   )}`
 );
+console.log(
+  `substr text here, If the first parameter is negative, the position counts from the end of the string=${s1.substr(
+    -4,
+    2
+  )}`
+);
+console.log(
+  `substr text here, If the first parameter is negative, the position counts from the end of the string=${s1.substr(
+    -4,
+    -2
+  )}`
+);
 
 console.log(
   `substr text here, If the first parameter is positive, the counts the end of the string=${s1.substr(
     2
+  )}`
+);
+console.log(
+  `substr text here, If the first parameter is positive, the counts the end of the string=${s1.substr(
+    2,
+    -4
   )}`
 );
 
@@ -117,14 +164,14 @@ const word3 = "Aviation";
 // * : 13. include
 console.log(sentence.includes(word1));
 console.log(sentence.includes(word3));
-console.log(sentence.includes('tion'));
+console.log(sentence.includes("tion"));
 console.log(
   `The word "${word1}" ${
     sentence.includes(word1) ? "is" : "is not"
   } in the sentence`
 );
 
-// * : 14. search
+// * : 14. search (Return -1 if not found)
 const sentence2 =
   "The commercial aviation industry suffered 39 total accidents in 2022, an increase from 29 in 2021. aviation";
 console.log(sentence2.search("aviation"));
@@ -139,7 +186,7 @@ console.log(sentence1.match(/ain/));
 console.log(sentence1.match(/ain/g));
 console.log(sentence1.match(/ain/gi));
 
-// * : 16. indexOf & lastIndexOf
+// * : 16. indexOf & lastIndexOf (Return -1 if not found)
 console.log(sentence1.indexOf("in"));
 console.log(sentence1.indexOf("xx"));
 console.log(sentence1.lastIndexOf("in"));

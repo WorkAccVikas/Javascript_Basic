@@ -1,5 +1,5 @@
 // Todo : Conditional Expression
-// if,if else,if else if else
+// if, if else, if else if else
 let age = 28;
 
 if (age < 0) {

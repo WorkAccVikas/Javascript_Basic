@@ -21,7 +21,7 @@ const c2 = 2000;
   b += 1;
   a += 2;
   const c1 = 3000;
-  // var y = 999;  // ! : illegal shadowing => let to var
+  // var y = 999;  // ! : illegal shadowing => let to var (Cannot redeclare block-scoped variable y )
   // Todo : declare var
   var w = 999;
 
@@ -42,7 +42,17 @@ console.log("Outside y = ", y);
 console.log("Outside a = ", a);
 console.log("Outside b = ", b);
 console.log("Outside w = ", w);
-// console.log("Outside z = ", z); // ! : Error, z is in block scope
+// console.log("Outside z = ", z); // ! : Error, z is in block scope (z is not defined)
+
+/** NOTE : In block scope :
+ *  - var :
+ *      - redeclare means outside change ✅
+ *      - new declare means outside access ✅
+ *
+ *  - let/const :
+ *      - redeclare means outside not change ❌
+ *      - new declare means outside not access (Error : is not defined) 🧧
+ */
 
 // Todo : Function Scope
 function hello() {
@@ -78,4 +88,14 @@ console.log("Outside y = ", y);
 console.log("Outside a = ", a);
 console.log("Outside b = ", b);
 // console.log("Outside p = ", p); // ! : Error, p is not defined
-// console.log("Outside w1 = ", w1); // ! : Error, w is in function scope / is not defined
+// console.log("Outside w1 = ", w1); // ! : Error, w1 is in function scope / is not defined
+
+/** NOTE : In function scope :
+ *  - var :
+ *      - redeclare means outside change ❌
+ *      - new declare means outside not access (Error : is not defined) 🧧
+ *
+ *  - let/const :
+ *      - redeclare means outside not change ❌
+ *      - new declare means outside not access (Error : is not defined) 🧧
+ */

@@ -177,6 +177,20 @@ console.log(`n1 >>> n2 = ${n1 >>> n2}`);
 console.log(`n1 ^ n2 = ${n1 ^ n2}`);
 console.log(10 << n2);
 
+// * : 9. in Operator
+const arr1 = [100, 200, 300];
+console.log(100 in arr1); // * : false
+console.log(0 in arr1); // * : true (Check index as key)
+console.log(3 in arr1); // * : false (because arr size is 3 means we can access 0,1,2)
+
+const ob1 = {
+  id: 1,
+  name: "Ram",
+};
+
+console.log("id" in ob1); // * : true
+console.log("mobile" in ob1); // * : false
+
 // This is single line comment
 
 /* This is 

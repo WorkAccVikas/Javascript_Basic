@@ -2,7 +2,8 @@
 
 let a = "Vikas";
 console.log("a = ", a, ", length = ", a.length);
-console.log(a[0]);
+console.log(a[0]); // * : V
+console.log(a[6]); // * : undefined
 
 // here b string in single quotes
 let b = "Ram";
@@ -35,17 +36,19 @@ let x = "John";
 let y = new String("John");
 let z = new String("John");
 
-console.log(`z = ${z}, type = ${typeof z}`);
+console.log(`z = ${z}, type = ${typeof z}`); // * : 'x = John, type = object'
 
-console.log(`x === w : ${x === w}`);
-console.log(`x == w : ${x == w}`);
-console.log(`x === y : ${x === y}`);
-console.log(`x == y : ${x == y}`);
-console.log(`z === y : ${z === y}`);
-console.log(`z == y : ${z == y}`);
+console.log(`x === w : ${x === w}`); // * : true
+console.log(`x == w : ${x == w}`); // * : true
 
-console.log(typeof x);
-console.log(typeof y);
+console.log(`x === y : ${x === y}`); // ! : false
+console.log(`x == y : ${x == y}`); // * : true
+
+console.log(`z === y : ${z === y}`); // ! : false
+console.log(`z == y : ${z == y}`); // ! : false
+
+console.log(typeof x); // * : string
+console.log(typeof y); // * : object
 
 const s1 = "2 + 2"; // creates a string primitive
 const s2 = new String("2 + 2"); // creates a String object

@@ -1,3 +1,4 @@
+// TOPIC : Generator Function
 // Todo : (1)
 function* simpleGenerator() {
   console.log("Line 1");
@@ -19,7 +20,7 @@ console.log(r1.next());
 console.log(r1.next());
 
 // Todo : (2)
-function* simpleGenerator1() {
+function *simpleGenerator1() {
   let x = 1;
   while (true) {
     yield x;
