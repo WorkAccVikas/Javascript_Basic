@@ -28,3 +28,20 @@ function sayName(name) {
 
 // calling the function after 2 seconds
 setTimeout(greet, 2000, "John", sayName);
+
+// ###########################################################################
+function greet1(name, surname, myFunction1) {
+  console.log("Hello world (greet1)");
+
+  // callback function
+  // executed only after the greet1() is executed
+  myFunction1(name, surname);
+}
+
+// callback function
+function sayName1(name, surname) {
+  console.log("Hello (sayName1)" + " " + name + " => " + surname);
+}
+
+// calling the function after 2 seconds
+setTimeout(() => greet1("John", "Tom", sayName1), 2000);

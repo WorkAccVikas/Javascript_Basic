@@ -117,10 +117,12 @@ let arr17_a = arr15.slice(0, -1);
 console.log(arr17_a);
 let arr17_b = arr15.slice(0, -2);
 console.log(arr17_b);
-let arr17_c = arr15.slice(-5, 0); // ! : Wrong way
+let arr17_c = arr15.slice(-5, 0);
 console.log(arr17_c);
 let arr17_d = arr15.slice(-5, -1);
 console.log(arr17_d);
+let arr17_g = arr15.slice(-5, 6);
+console.log(arr17_g);
 
 // * : 13. fill
 let arr18 = [1, 2, 3, 4, 5];
