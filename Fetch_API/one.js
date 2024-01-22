@@ -1,5 +1,5 @@
 // Todo : syntax for fetch get api
-let p1 = fetch("https://jsonplaceholder.typicode.com/todo/");
+let p1 = fetch("https://jsonplaceholder.typicode.com/posts");
 
 p1.then((response) => {
   console.log(response);

@@ -5,7 +5,7 @@ class Player1 {
 }
 
 const ob1 = new Player1();
-console.log(ob1); // * : Player1 {id: 1, name: 'Ram', age: undefined}
+console.log(ob1); // * : Player1 {id: 1, name: 'Ram'}
 // NOTE : Private variable not included in object
 console.log(ob1 instanceof Player1); // * : true
 console.log(ob1.id, ob1.name); // * : 1, "Ram"
