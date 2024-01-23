@@ -113,10 +113,10 @@ function userIdName({ id, displayName }) {
 }
 function userDetails({
   id,
-  displayName: dname,
+  displayName: dName,
   fullName: { firstName: fname, lastName: lname },
 }) {
-  return [id, dname, fname, lname];
+  return [id, dName, fname, lname];
 }
 
 console.log(userId(user)); // *: 42

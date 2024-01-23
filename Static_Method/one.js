@@ -10,9 +10,11 @@ class Animals {
   walk() {
     console.log(`Animal ${Animals.capitalize(this.name)} is walking`);
   }
+
   color() {
     console.log(`Animal city = ${this.city}`);
   }
+
   static capitalize(x) {
     return x.charAt(0).toUpperCase() + x.substr(1, x.length);
   }

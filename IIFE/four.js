@@ -35,13 +35,13 @@ let script = (() => {
   return {
     addWith: add,
     x,
-    valueofm: m,
+    valueOfM: m,
   };
 })();
 
 console.log(script);
 console.log(script.x);
-console.log(script.valueofm);
+console.log(script.valueOfM);
 console.log(script.addWith(568));
 
 // * : script1 add in global scope
@@ -54,11 +54,11 @@ var script1 = (() => {
   return {
     addWith: add,
     x,
-    valueofm: m,
+    valueOfM: m,
   };
 })();
 
 console.log(script1);
 console.log(script1.x);
-console.log(script1.valueofm);
+console.log(script1.valueOfM);
 console.log(script1.addWith(10));
