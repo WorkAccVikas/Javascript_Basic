@@ -1,9 +1,10 @@
 // Todo : fn(a,b,c) => fn(a)(b)(c)
 
 function sum(x, y, z) {
-  console.log("In sum fuction = ", x + y + z);
+  console.log("In sum function = ", x + y + z);
   return x + y + z;
 }
+
 function calculation(a) {
   console.log("In calculation function");
 }

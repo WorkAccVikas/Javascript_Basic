@@ -20,7 +20,7 @@ function calc(a, b, c) {
     mul: function (d) {
       return a * b * c * d;
     },
-    adddouble: function (e) {
+    addDouble: function (e) {
       console.log(e);
       return (a + b + c) * e;
     },
@@ -29,4 +29,4 @@ function calc(a, b, c) {
 
 let r4 = calc(2, 4, 6);
 console.log(r4.mul(5));
-console.log(r4.adddouble(10));
+console.log(r4.addDouble(10));
