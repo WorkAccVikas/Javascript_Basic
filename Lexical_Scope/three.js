@@ -32,8 +32,8 @@ const fun1 = () => {
     // ! : don't use arrow function use regular function as above all
     getFriends3: () => {
       console.log("getFriends3", this.list); // ! : undefined
-      console.log("getFriends3", this.name); // ! : empty string
-      console.log("getFriends3", this); // * : refer window object
+      console.log("getFriends3", this.name); // ! : undefined
+      console.log("getFriends3", this); // * : refer {}
     },
   };
   obj1.getFriends();

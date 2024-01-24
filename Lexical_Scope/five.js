@@ -17,4 +17,5 @@ function b() {
 }
 
 let r1 = b();
+// console.log(r1)
 r1();
