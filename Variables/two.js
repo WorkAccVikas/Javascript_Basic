@@ -1,6 +1,6 @@
 // Todo : (1)
 // {
-//     let a= 10;
+//     let a = 10;
 // }
 
 // console.log(a);  // ! : Error : a is not defined
@@ -10,7 +10,7 @@
 //   let a = 10;
 // }
 
-// console.log(a); // *: undefined
+// console.log(a); // * : undefined
 // var a = 20;
 
 // Todo : (3)
