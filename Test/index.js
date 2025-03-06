@@ -1,8 +1,8 @@
-function replaceObject(obj) {
-  obj = { value: 100 }; // Reassignment creates a new object
-  console.log("Inside function:", obj); // { value: 100 }
+function fetchUserData() {
+  if (!user) {
+    var user = "John Doe"; // Hoisted to function scope, not block scope
+  }
+  console.log(user); // ✅ Prints "John Doe" instead of throwing an error
 }
 
-let data = { value: 10 };
-replaceObject(data);
-console.log("Outside function:", data); // { value: 10 } (Original object remains unchanged)
+fetchUserData();
